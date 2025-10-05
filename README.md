@@ -38,9 +38,15 @@ php artisan module:seed CrudTest
 composer dev
 ```
 
-## Access the Module
+## Access the Application
 
-**CrudTest Module:** http://localhost:8000/crudtests
+**Admin Panel (Backpack):** http://localhost:8000/admin  
+**CrudTest Module (Vue):** http://localhost:8000/crudtests  
+**API Endpoints:** http://localhost:8000/api/test/contacts
+
+### Default Admin Credentials
+- **Email:** admin@admin.com
+- **Password:** password
 
 ## License
 
