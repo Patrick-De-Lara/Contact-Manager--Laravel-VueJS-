@@ -8,4 +8,5 @@ Route::prefix('test')->group(function () {
     Route::apiResource('crudtests', CrudTestController::class)->names('crudtest');
     Route::get('contacts', [CrudController::class, 'showData']);
     Route::post('contacts', [CrudController::class, 'store']);
+    Route::delete('contacts/{id}', [CrudController::class, 'destroy']);
 });
