@@ -1,18 +1,31 @@
 <template>
-  <div class="hello-world">
-    <h1>{{ message }}</h1>
-    <p>{{ description }}</p>
-  </div>
+  <div class="hello-world" style="max-width: 800px; margin: 0 auto; padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #ffffff; min-height: 100vh; color: #333;">
+    <div style="text-align: center; margin-bottom: 3rem; padding: 2rem;">
+      <h1 style="font-size: 2rem; margin-bottom: 1rem; font-weight: 300; color: #2c3e50;">{{ message }}</h1>
+      <p style="font-size: 1rem; margin-bottom: 2rem; color: #666;">{{ description }}</p>
+    </div>
 
-  <button @click="showModal = true">Add Contact</button>
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <button @click="showModal = true" style="background: #007bff; color: white; border: none; padding: 0.75rem 1.5rem; font-size: 0.9rem; border-radius: 4px; cursor: pointer; font-weight: 400;">
+        Add Contact
+      </button>
+    </div>
 
-  <div>
-    <h2>Contact List</h2>
-    <ul>
-      <li v-for="contact in contacts" :key="contact.id">
-        {{ contact.name }} - {{ contact.email }} - {{ contact.phone }}
-      </li>
-    </ul>
+    <div style="background: #ffffff; border: 1px solid #e1e5e9; border-radius: 8px; padding: 2rem;">
+      <h2 style="color: #2c3e50; margin-bottom: 1.5rem; font-size: 1.5rem; font-weight: 400; text-align: center; border-bottom: 1px solid #e1e5e9; padding-bottom: 1rem;">Contact List</h2>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li v-for="contact in contacts" :key="contact.id" style="background: #f8f9fa; margin-bottom: 0.5rem; padding: 1rem; border-radius: 4px; border-left: 3px solid #007bff; color: #333;">
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+            <span style="font-weight: 500; color: #2c3e50;">{{ contact.name }}</span>
+            <span style="color: #666; font-size: 0.9rem;">{{ contact.email }}</span>
+            <span style="color: #666; font-size: 0.9rem;">{{ contact.phone }}</span>
+          </div>
+        </li>
+      </ul>
+      <div v-if="contacts.length === 0" style="text-align: center; padding: 3rem; color: #666;">
+        <p style="font-size: 1rem; margin: 0;">No contacts found. Add your first contact!</p>
+      </div>
+    </div>
   </div>
 
   <div v-if="showModal" class="modal-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center; z-index: 1000;">
@@ -98,6 +111,13 @@ export default {
     closeModal() {
       this.showModal = false;
       this.resetForm();
+    },
+    resetForm() {
+      this.form = {
+        name: '',
+        email: '',
+        phone: '',
+      };
     },
     async submitForm() {
       try {
