@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/crudtest",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\CrudTest\\": "app/",
+            "Modules\\CrudTest\\Database\\Factories\\": "database/factories/",
+            "Modules\\CrudTest\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\CrudTest\\Tests\\": "tests/"
+        }
+    }
+}

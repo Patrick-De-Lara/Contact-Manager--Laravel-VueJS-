@@ -1,0 +1,11 @@
+{
+    "name": "CrudTest",
+    "alias": "crudtest",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\CrudTest\\app\\Providers\\CrudTestServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,16 @@
+<?php
+
+namespace Modules\CrudTest\Database\Seeders;
+
+use Illuminate\Database\Seeder;
+
+class CrudTestDatabaseSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        // $this->call([]);
+    }
+}

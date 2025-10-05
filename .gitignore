@@ -1,0 +1,107 @@
+# Laravel Core
+*.log
+.DS_Store
+.env
+.env.backup
+.env.production
+.env.local
+.env.*.local
+.phpactor.json
+.phpunit.result.cache
+/vendor
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/auth.json
+/subs
+
+# Laravel Build Artifacts
+/bootstrap/cache/*.php
+!/bootstrap/cache/.gitkeep
+/public/build
+/public/build-*
+
+# Module Build Artifacts
+/public/build-crudtest
+/Modules/**/node_modules
+/Modules/**/vendor
+/Modules/**/public/build
+
+# Stubs (Custom templates - should be committed)
+# /stubs/               # ❌ Don't ignore - these are templates!
+# Only ignore temp/cache stubs if you have them:
+# /stubs/.cache/
+# /stubs/temp/
+
+# IDE & Editor Files
+/.fleet
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+*.swp
+*.swo
+*~
+.project
+.settings
+.buildpath
+.sublime-project
+.sublime-workspace
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Testing & Coverage
+/coverage
+/.phpunit.cache
+.phpunit.result.cache
+/phpunit.xml
+/.phpunit.result.cache
+
+# Deployment & CI/CD
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.pnpm-debug.log
+
+# Cache & Temporary Files
+/storage/framework/cache/*
+!/storage/framework/cache/.gitkeep
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitkeep
+/storage/framework/views/*
+!/storage/framework/views/.gitkeep
+/storage/logs/*
+!/storage/logs/.gitkeep
+
+# Backpack
+/public/packages
+
+# Database
+*.sqlite
+*.sqlite-journal
+
+# Compiled Assets
+*.css.map
+*.js.map
+
+# Package Lock Files (Optional - choose one)
+# Uncomment if your team uses npm
+# package-lock.json
+
+# Uncomment if your team uses yarn
+# yarn.lock
+
+# Uncomment if your team uses pnpm
+# pnpm-lock.yaml
