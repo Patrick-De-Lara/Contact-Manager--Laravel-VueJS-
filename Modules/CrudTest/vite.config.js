@@ -9,12 +9,13 @@ export default defineConfig({
     build: {
         outDir: '../../public/build-crudtest',
         emptyOutDir: true,
-        manifest: true,
+        manifest: 'manifest.json', // Put manifest at root, not in .vite folder
     },
     plugins: [
         laravel({
             publicDirectory: '../../public',
             buildDirectory: 'build-crudtest',
+            hotFile: '../../public/build-crudtest.hot',
             input: [
                 __dirname + '/resources/assets/sass/app.scss',
                 __dirname + '/resources/assets/js/app.js'
