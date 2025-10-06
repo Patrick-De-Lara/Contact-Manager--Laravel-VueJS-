@@ -1,10 +1,6 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import tailwindcss from '@tailwindcss/vite';
-import { glob } from 'glob';
-
-// Get all module Vite configs
-const moduleConfigs = glob.sync('Modules/*/vite.config.js');
 
 export default defineConfig({
     plugins: [
