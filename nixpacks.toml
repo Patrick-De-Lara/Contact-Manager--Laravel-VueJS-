@@ -17,4 +17,4 @@ cmds = [
 ]
 
 [start]
-cmd = 'php artisan storage:link && php -S 0.0.0.0:${PORT:-8000} -t public/'
+cmd = 'chmod +x start.sh && ./start.sh'
