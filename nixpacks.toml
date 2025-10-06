@@ -17,4 +17,4 @@ cmds = [
 ]
 
 [start]
-cmd = 'rm -rf public/storage && php artisan storage:link && php -S 0.0.0.0:${PORT:-8000} -t public/'
+cmd = 'ln -sfn /app/storage/app/public /app/public/storage && php -S 0.0.0.0:${PORT:-8000} -t public/'
