@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Redirect home to CrudTest module
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/crudtests');
 });

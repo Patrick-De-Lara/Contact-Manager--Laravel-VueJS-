@@ -1,12 +1,21 @@
 <template>
 
   <div class="hello-world" style="max-width: 800px; margin: 0 auto; padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #ffffff; min-height: 100vh; color: #333;">
-    <div style="text-align: center; padding: 2rem;">
-      <h1 style="font-size: 2rem; font-weight: 300; color: #2c3e50;">{{ message }}</h1>
-      <p style="font-size: 1rem; color: #666;">{{ description }}</p>
+    <!-- Header with Admin Button -->
+    <div style="position: relative; margin-bottom: 2rem;">
+      <div style="text-align: center;">
+        <h1 style="font-size: 2rem; font-weight: 300; color: #2c3e50; margin: 0;">{{ message }}</h1>
+        <p style="font-size: 1rem; color: #666; margin: 0.5rem 0 0 0;">{{ description }}</p>
+      </div>
+      <a href="/admin" style="position: absolute; top: 0; right: 0; background: #6c757d; color: white; border: none; padding: 0.75rem 1.5rem; font-size: 0.9rem; border-radius: 4px; cursor: pointer; font-weight: 400; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+        <svg style="width: 18px; height: 18px;" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
+        </svg>
+        Admin Panel
+      </a>
     </div>
 
-    <!-- - Add Contact Button -->
+    <!-- Add Contact Button -->
     <div style="text-align: center; margin-bottom: 1rem;">
       <button @click="showModal = true" style="background: #007bff; color: white; border: none; padding: 0.75rem 1.5rem; font-size: 0.9rem; border-radius: 4px; cursor: pointer; font-weight: 400;">
         Add Contact

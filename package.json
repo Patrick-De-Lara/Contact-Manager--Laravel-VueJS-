@@ -3,8 +3,11 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "vite build",
-        "dev": "vite"
+        "build": "vite build && cd Modules/CrudTest && npm run build && cd ../..",
+        "build:main": "vite build",
+        "build:modules": "cd Modules/CrudTest && npm run build",
+        "dev": "vite",
+        "dev:modules": "cd Modules/CrudTest && npm run dev"
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.0.0",
